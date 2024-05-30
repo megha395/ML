@@ -41,3 +41,45 @@ Run the `preprocessing.py` script to preprocess the data. This script will:
 
 ```bash
 python preprocessing.py
+```
+
+### Step 2: Exploratory Data Analysis
+Open and run the analysis.ipynb notebook to perform EDA. This notebook will help you understand the data through visualizations and summary statistics.
+
+```bash
+analysis.ipynb
+```
+
+### Step 3: Model Training
+Run the model.py script to train the Logistic Regression model. This script will:
+
+- Load the preprocessed training data.
+- Train the model.
+- Save the trained model to a file.
+```bash
+python model.py
+```
+
+### Step 4: Model Evaluation
+Open and run the evaluation.ipynb notebook to evaluate the performance of the trained model. This notebook will:
+
+- Load the trained model and testing data.
+- Calculate evaluation metrics.
+- Generate performance visualizations such as the ROC curve.
+```bash
+evaluation.ipynb
+```
+
+## Project Dependencies
+Ensure you have the following dependencies installed (also listed in requirements.txt):
+
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+- jupyter
+
+
+## Contributing
+Feel free to fork this repository and contribute by submitting a pull request. For major changes, please open an issue first to discuss what you would like to change.
