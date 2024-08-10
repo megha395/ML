@@ -1,3 +1,4 @@
+# importing libraries
 from Global_imports import *
 
 data = pd.read_csv("loan.csv")
