@@ -11,11 +11,23 @@ def return_prediction(model, input_json):
     return prediction
 
 model = joblib.load('abalone_predictor.joblib')
-
+@app.route("/")
+def index():
+    return """
+    <h1>Welcome to our abalone prediction service</h1>
+    To use this service, make a JSON post request to the /predict url with the following fields:
+    <ul>
+    <li>length</li>
+    <li>diameter</li>
+    <li>height</li>
+    <li>whole_weight</li>
+    </ul>
+    """
 @app.route('/predict', methods = ['POST'])
 def abalone_prediction():
     content = request.json
     results = return_prediction(model, content)
+    print(results)
     return jsonify(results)
 
 if __name__ == '__main__':
